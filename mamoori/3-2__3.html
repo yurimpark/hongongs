@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const year = +prompt("태어난 해를 입력해주세요.", "");
+
+      let 띠 = "신,유,술,해,자,축,인,묘,진,사,오,미".split(",");
+
+      let 간 = "경,신,임,계,갑,을,병,정,무,기".split(",");
+
+      alert(
+        `${year}년에 태어났다면 ${간[year % 10]}${띠[year % 12]}년 입니다.`
+      );
+    </script>
+  </body>
+</html>
