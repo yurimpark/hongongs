@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 최대값을 구하는 함수 -->
+    <script>
+      // 현우님이 푼거
+      /* 왜냐면 배열로 값을 넣어주면 첫번째 인덱스(args[0])가 배열이니까
+그 안에 있는 요소들을 다시 검사해줘야 함.
+그래서 result에 output[0]을 넣고 반복문으로 안의 요소 비교 */
+      function max(...args) {
+        let output = args[0];
+        let result = output[0];
+        for (const item of output) {
+          if (result < item) {
+            result = item;
+          }
+        }
+        return result;
+      }
+      console.log(max([1, 2, 3, 4]));
+      // ===================================
+      //  지훈님이 풀었던거
+      function max(...args) {
+        let output = args[0];
+        for (const item of args) {
+          if (output < item) {
+            output = item;
+          }
+        }
+        return output;
+      }
+      console.log(max([1, 2, 3, 4]));
+    </script>
+  </body>
+</html>
