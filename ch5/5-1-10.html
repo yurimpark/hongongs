@@ -17,9 +17,13 @@
         // 매개변수의 자료형에 따라 조건 분기하기
         if (Array.isArray(first)) {
           output = first[0];
+          // 함수에 매개변수와 나머지 매개변수가 함께 사용되었기 때문에
+          // first배열 전체가 items에 들어감
           items = first;
         } else if (typeof first === "number") {
           output = first;
+          // first는 매개변수의 첫번째 숫자를 의미
+          // 52를 제외한 나머지 숫자들은 rests에 들어감
           items = rests;
         }
 
